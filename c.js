@@ -1,2 +1,2 @@
-var c = 'i am C';
-console.log(c);
+var cat = 'i am Cat';
+console.log(cat);

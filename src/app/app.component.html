@@ -6,30 +6,35 @@
     <app-heroes></app-heroes>
   </h1>
 </div> -->
-<div class="site">
-  <header>
-    <app-header></app-header>
-  </header>
-  <main>
+
+
     <mat-drawer-container class="example-container" autosize>
-      <mat-drawer #drawer class="example-sidenav" mode="side">
+      <mat-drawer #drawer class="example-sidenav" mode="push">
         <p>Auto-resizing sidenav</p>
         <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
         <button (click)="showFiller = !showFiller" mat-raised-button>
           Toggle extra text
         </button>
       </mat-drawer>
-    
-      <div class="example-sidenav-content">
-        <button type="button" mat-button (click)="drawer.toggle()">
-          Toggle sidenav
-        </button>
-      </div>
-    
+      <div class="site">
+        <header>
+            <mat-toolbar color="primary">
+                <mat-toolbar-row>
+                  <span>Custom Toolbar</span>
+                </mat-toolbar-row>
+             </mat-toolbar>
+          <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+          </button>
+          <app-header></app-header>
+        </header>
+        <main>
+
+        </main>
+      <footer>
+        <app-footer></app-footer>
+      </footer>
+    </div>
     </mat-drawer-container>
-  </main>
-  <footer>
-    <app-footer></app-footer>
-  </footer>
-</div>
+
 

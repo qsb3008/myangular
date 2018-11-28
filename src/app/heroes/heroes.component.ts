@@ -9,7 +9,6 @@ import { HeroService } from '../hero.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  selectedHero: Hero
   constructor(private heroService: HeroService) { 
 
   }
@@ -21,8 +20,5 @@ export class HeroesComponent implements OnInit {
     // heroService已经注入的root，所以可以通过this.调用
     this.heroService.getHeroes()
       .subscribe(heroes => this.heroes = heroes)
-  }
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
   }
 }

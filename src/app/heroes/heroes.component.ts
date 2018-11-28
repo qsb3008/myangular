@@ -18,7 +18,9 @@ export class HeroesComponent implements OnInit {
     this.getHeroes()
   }
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    // heroService已经注入的root，所以可以通过this.调用
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes)
   }
   onSelect(hero: Hero): void {
     this.selectedHero = hero;

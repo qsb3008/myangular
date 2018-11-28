@@ -20,12 +20,11 @@
         <header>
             <mat-toolbar color="primary">
                 <mat-toolbar-row>
-                  <span>Custom Toolbar</span>
+                  <button type="button" mat-button (click)="drawer.toggle()">
+                    裁断
+                  </button>
                 </mat-toolbar-row>
              </mat-toolbar>
-          <button type="button" mat-button (click)="drawer.toggle()">
-            Toggle sidenav
-          </button>
           <app-header></app-header>
         </header>
         <main>

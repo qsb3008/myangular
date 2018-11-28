@@ -1,15 +1,14 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule } from "@angular/material";
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
-    MatToolbarModule
+    CommonModule
   ],
   exports: [
-    MatToolbarModule
+    SharedModule
   ]
 })
 export class CoreModule { 
